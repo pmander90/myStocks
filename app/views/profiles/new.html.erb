@@ -1,3 +1,21 @@
-HELLO
+<% if @profile.errors.any? %>
+  <% @profile.errors.full_messages.each do |error| %>
+    <p><%= error %></p>
+  <% end %>
+<% end %>
 
-<%= link_to 'Signout', destroy_user_session_path, :method => :delete %>
+<%= form_tag '/create' do %>
+	<div>
+		<%= label_tag :username, "Username" %>
+		<%= text_field_tag :username %>
+	</div>
+
+	<div>
+		<%= label_tag :phone_number, "Phone Number" %>
+		<%= telephone_field_tag :phone_number %>
+	</div>
+
+	<div>
+		<%= submit_tag "Submit" %>
+	</div>
+<% end %>

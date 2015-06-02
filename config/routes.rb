@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => "registrations" }
 
   get "/new_profile", to: "profiles#new"
+  get "/show", to: "profiles#show"
+  post '/create', to: "profiles#create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
