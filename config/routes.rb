@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get "/new_profile", to: "profiles#new"
   get "/show", to: "profiles#show"
   post '/create', to: "profiles#create"
+
+  root 'profiles#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
