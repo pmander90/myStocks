@@ -4,6 +4,7 @@ class CreateProfiles < ActiveRecord::Migration
       t.string :username
       t.integer :phone_number
       t.string :stocks, array: true, default: []
+      t.belongs_to :user
       t.timestamps null: false
     end
   end
