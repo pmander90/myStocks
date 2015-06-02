@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20150601235748) do
     t.string   "username"
     t.integer  "phone_number"
     t.string   "stocks",       default: [],              array: true
+    t.integer  "user_id"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
