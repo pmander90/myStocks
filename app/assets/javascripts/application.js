@@ -13,4 +13,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require underscore
+//= require backbone
+//= require_tree ./backbone/routers
+//= require_tree ./backbone/models
+//= require_tree ./backbone/collections
+//= require_tree ./backbone/views
+//= require handlebars.runtime
 //= require_tree .
+
+$(document).ready(loadStocksApp);
+
+function loadStocksApp(){
+	new StocksRouter();
+}
