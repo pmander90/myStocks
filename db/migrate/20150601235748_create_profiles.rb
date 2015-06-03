@@ -3,7 +3,6 @@ class CreateProfiles < ActiveRecord::Migration
     create_table :profiles do |t|
       t.string :username
       t.integer :phone_number
-      t.string :stocks, array: true, default: []
       t.belongs_to :user
       t.timestamps null: false
     end

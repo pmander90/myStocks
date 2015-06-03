@@ -15,12 +15,11 @@ var StockView = Backbone.View.extend({
  	  this.$el.html(renderedHTML);
   },
   events: {
-  	'click.delete': 'delete'
+  	'click .remove': 'remove'
   },
-  delete: function() {
+  remove: function() {
   var view = this;
-  this.model.destroy()
-    .done(function(){
+  this.model.destroy().done(function(){
       view.$el.fadeOut();
     })
     .fail(function() {

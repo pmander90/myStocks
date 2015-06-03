@@ -1,35 +1,39 @@
 class StocksController < ApplicationController
   
   def index
-    @profile = current_user.profile
-    @stocks = []
-    @profile.stocks.each do |stock|
-      @stocks.push(symbol: stock)
-    end
+    @stocks = current_user.stocks
     render status: 200, json: @stocks.to_json
   end
 
-  def create
-    @stocks = current_user.profile.stocks
-    @stocks.push(params[:stocks][:symbol])
-      render json: @stocks.to_json, status: 200
+  def show
+    @stock = Stock.find(params[:id])
+    render status: 200, json: @stock.to_json
   end
 
-  # def update
-  #   @reminder = Reminder.find(params[:id])
-  #   if @reminder.update(reminder_params)
-  #     render json: @reminder.to_json, status: 200
-  #   end
-  # end
+  def create
+    @stock = current_user.stocks.new(stock_params)
+    if @stock.save
+      render json: @stock.to_json, status: 200
+    end
+  end
+
+  def update
+    @stock = Stock.find(params[:id])
+    if @stock.update(stock_params)
+      render json: @stock.to_json, status: 200
+    end
+  end
 
   def destroy
-    @stocks = current_user.profile.stocks
-    @stocks.each do |stock|
-      if stock == "fb"
-        @stocks[i+1].delete
-      end
+    @stock = Stock.find(params[:id])
+    if @stock.destroy
+      render json: @stock.to_json, status: 200
     end
-      render json: @stocks.to_json, status: 200
+  end
+
+  private
+  def stock_params
+    params.permit(:name, :symbol, :high, :low)
   end
 
 end
