@@ -5,7 +5,6 @@ gem 'handlebars_assets'
 gem 'rails-backbone'
 
 gem 'twilio-ruby'
-gem 'whenever', :require => false
 
 gem 'devise'
 gem 'figaro'
