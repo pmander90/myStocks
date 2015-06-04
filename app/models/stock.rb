@@ -14,7 +14,7 @@ class Stock < ActiveRecord::Base
 		)
 	end
 
-	def texteveryone
+	def self.texteveryone
 		Stock.text(User.first)
 	end
 

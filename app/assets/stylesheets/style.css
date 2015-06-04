@@ -107,3 +107,11 @@ font-family:'Raleway',sans-serif;
 font-size:18px;
 cursor:pointer
 }*/
+div.stock{
+	display: inline-block;
+	margin: 0px 10px 10px 10px;
+	text-align: left;
+}
+
+
+
