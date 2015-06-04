@@ -1,7 +1,7 @@
 class Stock < ActiveRecord::Base
 	belongs_to :user
 
-	def texting
+	def self.text(current_user)
 		text = "Hello #{current_user.profile.username}, heres your stocks, "
 		current_user.stocks.each do |stock|
 			text = text + "#{stock.name}: $#{stock.lastprice}. "
@@ -13,4 +13,9 @@ class Stock < ActiveRecord::Base
 			body: text
 		)
 	end
+
+	def texteveryone
+		Stock.text(User.first)
+	end
+
 end
