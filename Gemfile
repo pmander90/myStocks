@@ -3,7 +3,10 @@ source 'https://rubygems.org'
 
 gem 'handlebars_assets'
 gem 'rails-backbone'
+
 gem 'twilio-ruby'
+gem 'whenever'
+
 gem 'devise'
 gem 'figaro'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get "/show", to: "profiles#show"
   post '/create', to: "profiles#create"
 
+  get '/send_message', to: 'twilio#sendnow'
+
   root 'profiles#show'
 
   resources :stocks

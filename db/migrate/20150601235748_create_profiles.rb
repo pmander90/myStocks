@@ -2,7 +2,7 @@ class CreateProfiles < ActiveRecord::Migration
   def change
     create_table :profiles do |t|
       t.string :username
-      t.integer :phone_number
+      t.string :phone_number
       t.belongs_to :user
       t.timestamps null: false
     end
