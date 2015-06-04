@@ -40,7 +40,6 @@ var ready = function loadStocksApp(){
 				alert("Nothing Was Entered!");
 			} else {
 				popup.hide();
-				alert("Form Submitted Successfully...");
 				console.log(newCompany.val());
 				findStock = function(){
 					$.ajax({
@@ -59,7 +58,7 @@ var ready = function loadStocksApp(){
 						// var addStock = new StockModel({name: data1.Name, symbol: data1.Symbol, high: data1.High, low: data1.Low});
 						// addStock.save();
 						console.log(data1);
-						collection.create({name: data1.Name, symbol: data1.Symbol, high: data1.High, low: data1.Low});
+						collection.create({name: data1.Name, symbol: data1.Symbol, lastprice: data1.LastPrice, open: data1.Open, high: data1.High, low: data1.Low});
 					})
 				})
 			}

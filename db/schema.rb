@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20150603040108) do
   create_table "stocks", force: :cascade do |t|
     t.string   "symbol"
     t.string   "name"
+    t.integer  "open"
+    t.integer  "lastprice"
     t.integer  "high"
     t.integer  "low"
     t.integer  "user_id"

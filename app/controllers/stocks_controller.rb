@@ -33,7 +33,7 @@ class StocksController < ApplicationController
 
   private
   def stock_params
-    params.permit(:name, :symbol, :high, :low)
+    params.permit(:name, :symbol, :lastprice, :open, :high, :low)
   end
 
 end
