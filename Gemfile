@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'handlebars_assets'
 gem 'rails-backbone'
 
+gem 'bootstrap-sass'
+
 gem 'twilio-ruby'
 gem 'whenever', :require => false
 

@@ -113,5 +113,22 @@ div.stock{
 	text-align: left;
 }
 
+div#addStockDiv{
+	text-align: right;
+	margin-top: 10px;
+}
+
+div#userinfo{
+	color: white;
+}
+
+div#page{
+	margin-top: 80px;
+}
+
+div#title{
+	text-align: center;
+	color: white;
+}
 
 

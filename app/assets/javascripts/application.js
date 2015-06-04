@@ -34,13 +34,11 @@ var ready = function loadStocksApp(){
 
 		var send = $("#send");
 		var newCompany = $("#newCompany");
-		var stockName = newCompany.val();
 		send.on("click", function() {
 			if (newCompany.val() === "") {
 				alert("Nothing Was Entered!");
 			} else {
 				popup.hide();
-				console.log(newCompany.val());
 				findStock = function(){
 					$.ajax({
 					type: 'GET',

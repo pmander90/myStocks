@@ -7,12 +7,33 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<% if user_signed_in? && current_user.profile != nil %>
-		<%= current_user.profile.username %>
-		<%= link_to 'Signout', destroy_user_session_path, :method => :delete %>
-	<% end %>
+	<header class="navbar navbar-fixed-top navbar-inverse">
+		<% if user_signed_in? && current_user.profile != nil %>
+			
+			<div class='col-xs-4' id='userinfo'>
+				<h5>Signed in as: <%= current_user.profile.username %></h5>
+				<h5><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h5>
+			</div>
+
+			<div class='col-xs-4' id='title'>
+				<h1> My Stocks </h1>
+			</div>
+
+			<div class='col-xs-4' id='addStockDiv'>
+				<button id="addStock">Add Stock</button>
+			</div>
+
+		<% else %>
+			
+			<div class='col-xs-12' id='title'>
+				<h1> My Stocks </h1>
+			</div>
+		<% end %>
+	</header>
 	
+<div id='page'>
 <%= yield %>
+</div>
 
 </body>
 </html>

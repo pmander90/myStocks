@@ -3,14 +3,11 @@ var StockView = Backbone.View.extend({
   tagName: "div",
 
   initialize: function() {
-    console.log("loaded stock view");
+
     this.render();
     this.listenTo(this.model, 'change', this.render);
   },
   render: function() {
-  	// this.$el.empty();
-  	// this.$el.append("<p>" + this.model.get("body") + "</p>");
-  	// this.$el.append("<div class='finish'>Finish</div>");
   	var renderedHTML = HandlebarsTemplates['stocks/show'](this.model.toJSON());
  	  this.$el.html(renderedHTML);
   },
