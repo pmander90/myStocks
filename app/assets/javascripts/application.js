@@ -63,7 +63,7 @@ var ready = function loadStocksApp(){
 				})
 			}
 				findStock();
-				// newCompany.val('');
+				newCompany.val('');
 
 			}
 		})
