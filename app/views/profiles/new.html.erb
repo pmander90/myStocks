@@ -1,0 +1,21 @@
+<% if @profile.errors.any? %>
+  <% @profile.errors.full_messages.each do |error| %>
+    <p><%= error %></p>
+  <% end %>
+<% end %>
+
+<%= form_tag '/create' do %>
+	<div>
+		<%= label_tag :username, "Username" %><br>
+		<%= text_field_tag :username %>
+	</div>
+
+	<div>
+		<%= label_tag :phone_number, "Phone Number" %><br>
+		<%= telephone_field_tag :phone_number %>
+	</div>
+
+	<div>
+		<%= submit_tag "Submit" %>
+	</div>
+<% end %>
