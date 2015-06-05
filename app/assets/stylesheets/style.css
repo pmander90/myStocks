@@ -77,8 +77,10 @@ div#page{
 
 div#title{
 	text-align: center;
-	color: white;
-	font-family: Avant Garde;
+	color: #85ADFF;
+	font-family: Tangerine;
+	font-weight: bold;
+	text-decoration: underline;
 }
 
 p#stockTitle{
@@ -89,7 +91,7 @@ body {
 	background-image: url('http://upload.wikimedia.org/wikipedia/commons/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg');
 	background-size: cover;
 	background-repeat: no-repeat; 
-	padding: 10px 10px 1000px 10px;
+	padding: 10px 10px 600px 10px;
 }
 
 div#deviseForm{
