@@ -36,7 +36,7 @@ background-color: whitesmoke;
 }
 
 h2#popupTitle{
-background-color: #FFCCFF;
+background-color: #85ADFF;
 padding:20px 35px;
 margin:-10px -50px;
 text-align:center;
@@ -94,7 +94,7 @@ body {
 	padding: 10px 10px 600px 10px;
 }
 
-div#deviseForm{
+div#myForm{
 	color:black;
 	text-align: center;
 	width: 50%;

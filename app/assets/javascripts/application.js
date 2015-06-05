@@ -42,6 +42,7 @@ var ready = function loadStocksApp(){
 				alert("Nothing Was Entered!");
 			} else {
 				popup.hide();
+				stockList.css({"position": "relative", "z-index": "1"});
 				findStock = function(){
 					$.ajax({
 					type: 'GET',
@@ -67,7 +68,8 @@ var ready = function loadStocksApp(){
 		
 		var close = $("#closePopup");
 		close.on("click", function() {
-			event.preventDefault()
+			event.preventDefault();
+			stockList.css({"position": "relative", "z-index": "1"});
 			popup.hide();
 		})
 
