@@ -12,7 +12,7 @@ var StockView = Backbone.View.extend({
  	  this.$el.html(renderedHTML);
   },
   events: {
-  	'click .remove': 'remove'
+  	'click #remove': 'remove'
   },
   remove: function() {
   var view = this;

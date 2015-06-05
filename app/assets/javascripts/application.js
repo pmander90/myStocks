@@ -27,14 +27,17 @@
 var ready = function loadStocksApp(){
 		new StocksRouter();
 		var addStock = $("#addStock");
+		var stockList = $('#stocklist')
 		var popup = $("#abc");
 		addStock.on("click", function(){
 			popup.show();
+			stockList.css({"position": "absolute", "z-index": "-1"});
 		})
+
 
 		var send = $("#send");
 		var newCompany = $("#newCompany");
-		send.on("click", function() {
+		send.click(function() {
 			if (newCompany.val() === "") {
 				alert("Nothing Was Entered!");
 			} else {
@@ -61,9 +64,10 @@ var ready = function loadStocksApp(){
 
 			}
 		})
-
-		var close = $("#close");
+		
+		var close = $("#closePopup");
 		close.on("click", function() {
+			event.preventDefault()
 			popup.hide();
 		})
 
@@ -74,3 +78,4 @@ var ready = function loadStocksApp(){
 
 
 $(document).ready(ready);
+$(document).on('page:load', ready);
