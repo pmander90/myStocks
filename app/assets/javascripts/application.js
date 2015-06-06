@@ -29,12 +29,17 @@ var ready = function loadStocksApp(){
 		var addStock = $("#addStock");
 		var stockList = $('#stocklist')
 		var popup = $("#abc");
+
+		// this should probably be handled using backbone in the
+		// stockList view
 		addStock.on("click", function(){
 			popup.show();
 			stockList.css({"position": "absolute", "z-index": "-1"});
 		})
 
-
+		// this should ideally be extracted into a new view as well (stockSerchView)
+		// perhaps?
+		
 		var send = $("#send");
 		var newCompany = $("#newCompany");
 		send.click(function() {
@@ -65,7 +70,7 @@ var ready = function loadStocksApp(){
 
 			}
 		})
-		
+
 		var close = $("#closePopup");
 		close.on("click", function() {
 			event.preventDefault();
