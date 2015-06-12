@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   get '/send_message', to: 'twilio#sendnow'
 
+  get '/partysymbol', to: 'api#symbol'
+  get '/partystock', to: 'api#stock'
+  
   root 'profiles#show'
 
   resources :stocks

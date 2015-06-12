@@ -8,6 +8,9 @@ gem 'bootstrap-sass'
 gem 'twilio-ruby'
 gem 'whenever', :require => false
 
+gem 'httparty'
+gem 'pry'
+
 gem 'devise'
 gem 'figaro'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
