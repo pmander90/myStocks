@@ -46,15 +46,13 @@ var ready = function loadStocksApp(){
 				findStock = function(){
 					$.ajax({
 					type: 'GET',
-					dataType: 'jsonp',
-					jsonp: 'callback',
-					url: 'http://dev.markitondemand.com/Api/v2/Lookup/jsonp?input=' + newCompany.val()
+					dataType: 'json',
+					url: '/partysymbol?company=' + newCompany.val()
 				}).done(function(data){
 					$.ajax({
 						type: 'GET',
-						dataType: 'jsonp',
-						jsonp: 'callback',
-						url: 'http://dev.markitondemand.com/Api/v2/Quote/jsonp?symbol=' + data[0].Symbol
+						dataType: 'json',
+						url: '/partystock?symbol=' + data[0].Symbol
 					}).done(function(data1){
 						collection.create({name: data1.Name, symbol: data1.Symbol, lastprice: data1.LastPrice, open: data1.Open, high: data1.High, low: data1.Low});
 					})
