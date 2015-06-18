@@ -5,9 +5,8 @@ var StocksCollection = Backbone.Collection.extend ({
 		_.each(collection.models, function(model){
 			$.ajax({
 				type: 'GET',
-				dataType: 'jsonp',
-				jsonp: 'callback',
-				url: 'http://dev.markitondemand.com/Api/v2/Quote/jsonp?symbol=' + model.attributes.symbol
+				dataType: 'json',
+				url: '/partystock?symbol=' + model.attributes.symbol
 			}).done(function(data){
 				model.set({
 					high: data.High,
