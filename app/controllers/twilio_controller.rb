@@ -1,7 +1,7 @@
 class TwilioController < ApplicationController
 	
 	def sendnow
-		Stock.text(current_user)
+		# Stock.text(current_user)
 		redirect_to '/show'
 	end
 
