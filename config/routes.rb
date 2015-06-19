@@ -9,8 +9,10 @@ Rails.application.routes.draw do
 
   get '/partysymbol', to: 'api#symbol'
   get '/partystock', to: 'api#stock'
+
+  get '/home', to: 'home#home'
   
-  root 'profiles#show'
+  root 'home#home'
 
   resources :stocks
   # The priority is based upon order of creation: first created -> highest priority.

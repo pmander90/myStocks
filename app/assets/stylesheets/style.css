@@ -106,3 +106,20 @@ div#myForm{
 	background: rgba(200,200,200,.7);
 }
 
+h4#direction{
+	color:white;
+	text-align: center;
+}
+
+div#login{
+	text-align: right;
+	margin-top:12px;
+	font-size: 115%;
+}
+
+div#aboutUs{
+	text-align: left;
+	margin-top:25px;
+	font-size: 115%;
+}
+

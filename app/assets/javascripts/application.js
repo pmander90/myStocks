@@ -71,8 +71,6 @@ var ready = function loadStocksApp(){
 			popup.hide();
 		})
 
-
-
 	}
 
 

@@ -1,3 +1,26 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+	<div class='col-xs-4' id='userinfo'>
+		<h5>Signed in as: <%= current_user.profile.username.capitalize %></h5>
+		<h5><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h5>
+		<h5> <a href="/home">About Us</a> </h5>
+	</div>
+
+	<div class='col-xs-4' id='title'>
+		<h1> Money Never Sleeps </h1>
+	</div>
+
+	<div class='col-xs-4' id='addStockDiv'>
+		<h5>
+			<a href="/send_message"> Text My Stocks</a>
+		</h5>
+
+		<h5>
+			<a id="addStock">Add Stock</a>
+		</h5>
+
+	</div>
+</header>
+
 <div id="abc" style= "display: none">
 
 <div id="popupContact">
@@ -12,6 +35,10 @@
 
 </div>
 
+<div class="col-sx-12"> 
+	<h4 id="direction"> Click on "Add Stock" to start following stocks </h4>
+
+</div>
 
 <div class="col-xs-12" id="stocklist"></div>
 

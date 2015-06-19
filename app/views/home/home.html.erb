@@ -1,0 +1,36 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+	<% if user_signed_in? && current_user.profile != nil %>
+		<div class='col-xs-4' id='userinfo'>
+			<h5>Signed in as: <%= current_user.profile.username.capitalize %></h5>
+			<h5><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h5>
+		</div>
+
+		<div class='col-xs-4' id='title'>
+			<h1> Money Never Sleeps </h1>
+		</div>
+
+		<div class='col-xs-4' id='login'>
+			<h5> <a href="/show"> My Profile </a> </h5>
+		</div>
+
+	<% else %>
+		<div class='col-xs-4' id='title'>
+
+		</div>
+
+		<div class='col-xs-4' id='title'>
+			<h1> Money Never Sleeps </h1>
+		</div>
+
+		<div class='col-xs-4' id='login'>
+			<h5>
+				<a href='/users/sign_in'> Login </a>
+			</h5>
+
+			<h5>
+				<a href='/users/sign_up'> Sign Up </a>
+			</h5>
+		</div>
+	<% end %>
+</header>
+new home
